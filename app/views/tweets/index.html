@@ -1,0 +1,40 @@
+<!DOCTYPE html><!-- このファイルはHTMLですという宣言 -->
+<html><!-- ここからHTMLが始まりますというタグ -->
+<head><!-- ここから裏の設定ですよという宣言 -->
+	<meta charset="utf-8"><!-- 文字化け防止の記述 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- ややこしいので無視してOK -->
+	<title>spoil me more</title><!-- ページのタイトルを入れます -->
+</head><!-- ここまでがうらの設定ですよという宣言 -->
+<body><!-- ここからページに表示される内容ですよという宣言 -->
+<head>
+<div class= "navbar">
+<%if user_signed_in? %>
+<li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+<li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+<%  else %>
+<li><%= link_to 'ログイン',new_user_session_path, class: "login" %></li>
+<li><%= link_to '新規登録',new_user_registration_path, class: "sign-up" %></li>
+</div>
+</head>
+<div>
+<h1>Spoil Me More </h1><!-- 見出し -->
+</div>
+<dvi>
+<p>最近いつ、褒められましたか。</p>
+<p>最近いつ、褒めましたか</p>
+</div>
+
+<div>
+<p><%= link_to '甘やかされたい', "#", class: "post-up" %></p>
+<P><%= link_to '甘やかされたい', "#", class: "comment-up" %></P>
+</div>
+
+<img src="test.jpg" alt=""><!-- 画像を表示 -->
+<a href="https://www.sejuku.net/blog/">解説していたブログはこちら</a><!-- リンクを表示 -->
+
+<footer>
+
+</footer>
+
+</body><!-- ここまでがページに表示される内容ですよという宣言 -->
+</html><!-- ここまでがHTMLですという終わりの宣言 -->

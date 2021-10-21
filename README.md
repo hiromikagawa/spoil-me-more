@@ -30,7 +30,7 @@ has_many :comments
 has_many :likes
 has_mane :relations
 
-## postsテーブル
+## tweetsテーブル
 
 | Column| Type       | Options          |
 |-------|------------|------------------|
