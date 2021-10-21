@@ -1,24 +1,75 @@
 # README
+## アプリ名： spoil me 
+## 使い方： 自分が頑張った時や、達成した時に褒めて欲しい人や感動を共有したい人と、褒め力を伸ばしたい人、自分の幸せをお裾分けしたい人をつなげるコミュニティサイトです。
+- 本番環境　デプロイ先：
+        - テストアカウント：
+        - ID：
+## 制作背景
+###
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 工夫した内容
+## 使用技術 
+## 課題や今後実装したい機能
 
-Things you may want to cover:
+# DB設計図
 
-* Ruby version
+## usersテーブル
 
-* System dependencies
+| Column    | Type   | Options     |
+|-----------|--------|-------------|
+| nickname  | string | null :false |
+| email     | string | null :false |
+| password  | string | null :false |
+| lastname  | string | null :false |
+| firstname | string | null :false |
+| birthday  | date   | null :false |
 
-* Configuration
+### Association
+has_many :posts
+has_many :comments
+has_many :likes
+has_mane :relations
 
-* Database creation
+## postsテーブル
 
-* Database initialization
+| Column| Type       | Options          |
+|-------|------------|------------------|
+| title | string     | null :false      |
+| text  | text       | null :false      |
+| user  | references | foreign_key:true |
 
-* How to run the test suite
+### Association
+belongs_to :user 
+has_mane :comments
 
-* Services (job queues, cache servers, search engines, etc.)
+## commentsテーブル
 
-* Deployment instructions
+| Column  | Type       | Options          |
+|---------|------------|------------------|
+| comment | text       | null :falls      |
+| post    | references | foreign_key:true |
+| user    | references | foreign_key:true |
 
-* ...
+### Association
+has_mane :likes
+belongs_to :user
+
+## likesテーブル
+
+| Column | Type       | Options          |
+|--------|------------|------------------|
+| user   | references | foreign_key:true |
+|comment | references | foreign_key:true |
+
+### Association
+belongs_to :user
+belomgs_to :comment
+
+## relationsテーブル
+| Column   | Type       | Options          |
+|----------|------------|------------------|
+| user     | references | foreign_key:true |
+| follower | references | foreign_key:true |
+
+### Association
+belongs_to :user
