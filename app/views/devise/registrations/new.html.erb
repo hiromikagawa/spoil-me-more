@@ -1,0 +1,39 @@
+
+<h2>新規登録</h2>
+
+<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div>
+   <%= f.label 'ニックネーム' %>
+   <%= f.text_field :nickname %>
+  </div>
+   <div>
+   <%= f.label '名字' %>
+   <%= f.text_field :last_name %>
+  </div>
+   <div>
+   <%= f.label '名前' %>
+   <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'E-mail'%><br/>
+    <%= f.email_field :email, autofocus: true, autocomplete: "Eメール" %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'パスワード' %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> 文字以上)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "パスワード" %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'パスワード(確認）'%><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "サインアップ" %>
+  </div>
+<% end %>
