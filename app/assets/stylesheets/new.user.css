@@ -1,0 +1,27 @@
+
+.from-wrap{
+  background-color: cadetblue;
+}
+
+.form-header{
+  display: block;
+}
+.form-header-text{
+  font-size: 50px;
+  font-family: 'Vollkorn', serif;
+  color:blac
+  
+}
+
+.form-group{
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.form-text{
+  font-size: 30px;
+  font-family: 'Vollkorn', serif;
+
+}
