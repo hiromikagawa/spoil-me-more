@@ -1,0 +1,15 @@
+.contets-row{
+display: flex;
+justify-content: center;
+font-family: 'Vollkorn', serif;
+}
+.contets{
+
+}
+.field{
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+}
