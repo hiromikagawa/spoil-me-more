@@ -1,27 +1,32 @@
-
-.from-wrap{
-  background-color: cadetblue;
+body{
+  margin: 0;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+ background-image: url(top.jpg);
 }
 
-.form-header{
-  display: block;
-}
-.form-header-text{
-  font-size: 50px;
+.main {
+  display: flex;
+  flex-direction: column;
   font-family: 'Vollkorn', serif;
-  color:blac
+}
+.title-contents{
+
+}
+
+.main-title{
+  display: flex;
+  justify-content: center;
+}
+.servicr-explain{
+  display: flex;
+  justify-content: center;
+}
+.main-lists-contents{
   
 }
-
-.form-group{
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+.post-up{
 }
-
-.form-text{
-  font-size: 30px;
-  font-family: 'Vollkorn', serif;
-
+.comment-up{
 }

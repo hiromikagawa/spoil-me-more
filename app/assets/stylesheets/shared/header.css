@@ -1,0 +1,42 @@
+
+.top-page-header{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(216, 247, 237);
+}
+.nev{
+  background-color: blue;
+  display: flex;
+  list-style: none;
+  justify-content: space-around
+  font-family: 'Vollkorn', serif;
+}
+.list{
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.sign-up {
+  line-height: 32px;
+  text-decoration: none;
+  color: #333333;
+}
