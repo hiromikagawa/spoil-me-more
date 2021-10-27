@@ -1,0 +1,14 @@
+.contents-row{
+  font-family: 'Vollkorn', serif;
+}
+
+.container{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field{
+  display: block;
+  font-size:25px;
+}

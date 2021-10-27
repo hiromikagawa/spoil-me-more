@@ -1,0 +1,32 @@
+body{
+  margin: 0;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+ background-image: url(top.jpg);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Vollkorn', serif;
+}
+.title-contents{
+
+}
+
+.main-title{
+  display: flex;
+  justify-content: center;
+}
+.servicr-explain{
+  display: flex;
+  justify-content: center;
+}
+.main-lists-contents{
+  
+}
+.post-up{
+}
+.comment-up{
+}

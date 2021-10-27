@@ -1,0 +1,8 @@
+.logo-white{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(216, 247, 237);
+}

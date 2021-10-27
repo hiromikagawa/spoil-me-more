@@ -1,5 +1,5 @@
 # README
-## アプリ名： spoil me 
+## アプリ名： spoil me more
 ## 使い方： 自分が頑張った時や、達成した時に褒めて欲しい人や感動を共有したい人と、褒め力を伸ばしたい人、自分の幸せをお裾分けしたい人をつなげるコミュニティサイトです。
 - 本番環境　デプロイ先：
         - テストアカウント：
@@ -15,14 +15,11 @@
 
 ## usersテーブル
 
-| Column    | Type   | Options     |
-|-----------|--------|-------------|
-| nickname  | string | null :false |
-| email     | string | null :false |
-| password  | string | null :false |
-| lastname  | string | null :false |
-| firstname | string | null :false |
-| birthday  | date   | null :false |
+| Column     | Type   | Options                   |
+|------------|--------|---------------------------|
+| nickname   | string | null :false               |
+| email      | string | null :false, unique: true |
+| password   | string | null :false               |
 
 ### Association
 has_many :posts
@@ -47,7 +44,7 @@ has_mane :comments
 | Column  | Type       | Options          |
 |---------|------------|------------------|
 | comment | text       | null :falls      |
-| post    | references | foreign_key:true |
+| tweet   | references | foreign_key:true |
 | user    | references | foreign_key:true |
 
 ### Association
