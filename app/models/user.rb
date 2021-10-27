@@ -7,4 +7,5 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :nickname
   end
+  has_many :tweets
 end

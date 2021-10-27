@@ -1,13 +1,19 @@
-<%= render "shared/header" %>
-<%# CSS・・・assets/stylesheets/user/new.css %>
+
+
 <div class="contents-row">
   <div class="container">
-    <h1>Sign up</h1>
+    <div class="field">
+     <h1>Sign up</h1>
+    </div>
+
+
     <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
-       <%= f.label :nickname %> <em><br />
+
+       <%= f.label :nickname %><br />
+
        <%= f.text_field :nickname, autofocus: true %>
       </div>
       
@@ -35,4 +41,4 @@
     <% end %>
   </div>
 </div>
-<%= render "shared/footer" %>
+

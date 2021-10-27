@@ -1,19 +1,40 @@
-<%= render "shared/header" %>
-<div class='main'>
-  <div class='title-contents'>
-   <h1 class='main-title'>
-    Spoil Me More 
-   </h1>
-    <p class='servicr-explain'>
-    spoil me more は、いつも頑張っているあなたに
-    </p>
+<link rel ='stylesheet' href="text.css">
+<body>
+ <div class='main'>
+   <div class='title-contents'>
+      <h1 class='main-title'>
+       Spoil Me More 
+      </h1>
+      <p class='servicr-explain'>
+       spoil me more は、いつも頑張っているあなたに
+       </p>
+    </div>
+
   </div>
 
   <div class='main-lists'>
     <ul class='main-lists-contents'>
-      <li><%= link_to '今日も頑張ったよ', "#", class: "tweet-up" %></li>
+      <li><%= link_to '今日も素敵', new_tweet_path, class: "tweet-up" %></li>
       <li><%= link_to '幸せをお裾分け', "#", class: "comment-up" %></li>
     </ul>
   </div>
-</div>
-<%= render "shared/footer" %>
+
+  <div class='tweet-contents'>
+    <h3 class='pickuup-title'>NEW</h3>
+  </div>
+  <div class = 'card-list'>
+    <% @tweets.each do |tweet|%>
+      <section class="card">
+       <img class="card-img" src="http://webcreatorbox.com/sample/images/bear.jpg" alt="">
+        <div class="card-content">
+          <h4 class="card-title"><%= tweet.title %></h4>
+          <p class="card-text"><%= tweet.text %></p>
+        </div>
+        <div class="card-link">
+          <%= tweet.user.nickname %>
+        </div>
+      </section>
+    <% end %>
+  <div>
+</body>
+

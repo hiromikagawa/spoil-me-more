@@ -1,8 +1,10 @@
-<%# CSS・・・assets/stylesheets/user/sessions.css %>
-<%= render "shared/header" %>
+
+<link rel ='stylesheets' href="text.css">
 <div class= "contets-row">
   <div class = "container">
+    <div class='field'>
     <h1>Log in</h1>
+    </div>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %> 
      <div class="field">
        <%= f.label :email %><br />
@@ -27,5 +29,5 @@
     <% end %>
   </div>
 </div>
-<%= render "shared/footer" %>
-<%= render "devise/shared/links" %>
+
+<%#= render "devise/shared/links" %>
