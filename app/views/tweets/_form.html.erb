@@ -1,12 +1,20 @@
 <link rel="stylesheets" href="tweet.form">
-  <%= form_with(model: @tweet, local: true) do |form| %>
+<script src="index.js"></script>
+<%= form_with(model: @tweet, local: true) do |f| %>
   <div class='form-text'>
     <div class= "title_text_field">
-     <%= form.text_field :title, placeholder: "title" %>
+     <%= f.text_field :title, placeholder: "title" %>
     </div>
     <div class='title_text_area'>
-      <%= form.text_area :text,placeholder: "text", rows: "10"%>
+      <%= f.text_area :text,placeholder: "text", rows: "10"%>
     </div>
-      <%= form.submit "SEND" %>
-  </div>
-  <% end %>
+    <div class="form-input">
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image %>
+      </label>
+    </div>
+      <%= f.submit "SEND" %>
+    </div>
+  <div>
+<% end %>
