@@ -86,12 +86,8 @@ li{
 }
 
 
-input {
-  width: 300px;
-  height: 50px;
-  
-  border: solid 1px;
-}
+
+
 .actions{
   display: flex;
   justify-content: center;
@@ -104,7 +100,7 @@ input {
 
 .field{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: 10px 0px 0px 0px;
 }
@@ -151,6 +147,7 @@ h1:after {
   flex-direction: column;
 }
 h3{
+  margin: 30px 0px 30px 0px;
   font-size: 25px;
   display: flex;
   justify-content: center;
@@ -230,4 +227,14 @@ h3:before {
 
 h3:after {
   right: 7px;
+}
+
+.user-field{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+textarea{
+  width: 650px;
+  margin: 30px;
 }

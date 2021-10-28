@@ -1,5 +1,4 @@
 <link rel ='stylesheet' href="tweet.css">
-<%= render "shared/header" %>
 <div class="contents row">
     <% if user_signed_in? && current_user.id == @tweet.user_id %>
       <div class="more">
@@ -13,6 +12,7 @@
         </ul>
       </div>
     <% end %>
+    <p><%= @tweet.title %></p>
     <p><%= @tweet.text %></p>
     <span class="name">
       <a href="/users/<%= @tweet.user.id %>">
@@ -20,4 +20,3 @@
              </a>
     </span>
   </div>
-<%= render "shared/footer" %>
