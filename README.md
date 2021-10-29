@@ -1,15 +1,29 @@
 # README
-## アプリ名： spoil me more
-## 使い方： 自分が頑張った時や、達成した時に褒めて欲しい人や感動を共有したい人と、褒め力を伸ばしたい人、自分の幸せをお裾分けしたい人をつなげるコミュニティサイトです。
-- 本番環境　デプロイ先：
-        - テストアカウント：
-        - ID：
-## 制作背景
+## アプリ名：  spoil me more  
+## アプリケーション概要  
+自分が頑張った時や、達成した時に褒めて欲しい人や感動を共有したい人と、褒め力を付けたい又、誰かを褒めたい人をつなげるコミュニティサイトです。
+- 本番環境　デプロイ先： 
+        - テストアカウント：hiromi
+        - ID：2222
+## 制作背景　  
+
 ###
 
 ## 工夫した内容
-## 使用技術 
+
+## 使用技術  
+Ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
+## 実装した機能のついて
+
 ## 課題や今後実装したい機能
+素敵ね機能  
+頑張ってるね機能  
+マイページ機能  
+ランキング機能  
+フォロー機能  
+個人チャット機能  
+
+###
 
 # DB設計図
 
@@ -22,7 +36,7 @@
 | password   | string | null :false               |
 
 ### Association
-has_many :posts
+has_many :tweets
 has_many :comments
 has_many :likes
 has_mane :relations
@@ -41,15 +55,16 @@ has_mane :comments
 
 ## commentsテーブル
 
-| Column  | Type       | Options          |
-|---------|------------|------------------|
-| comment | text       | null :falls      |
-| tweet   | references | foreign_key:true |
-| user    | references | foreign_key:true |
+| Column| Type       | Options          |
+|-------|------------|------------------|
+| text  | text       | null :falls      |
+| tweet | references | foreign_key:true |
+| user  | references | foreign_key:true |
 
 ### Association
 has_mane :likes
 belongs_to :user
+belongs_to :tweet
 
 ## likesテーブル
 

@@ -12,23 +12,22 @@
   </div>
   <div class='main-lists'>
     <ul class='main-lists-contents'>
-      <li><%= link_to '今日も素敵', new_tweet_path, class: "tweet-up" %></li>
+      <li><%= link_to '今日も素敵❤️(新規投稿）', new_tweet_path, class: "tweet-up" %></li>
     </ul>
   </div>
   <div class='tweet-contents'>
     <h3 class='pickuup-title'>NEW</h3>
   </div>
   <div class = 'card-list'>
-    <% @tweets.each do |tweet|%>
+    <% @tweets.first(3).each do |tweet|%>
       <section class="card">
           <div>
-           <%#= image_tag tweet.image, class: 'tweet-image', variant(resize: '500x500'), class: 'message-image', if tweet.image.attached? %>
+           <%= image_tag tweet.image.variant(resize: '350x300'), class: 'message-image' if tweet.image.attached? %>
           <div>
           <div class="card-content">
             <h4 class="card-title">
             <li><%= link_to tweet.title, tweet_path(tweet.id), method: :get %></li>
             </h4>
-            <p class="card-text"><%= tweet.text %></p>
           </div>
           <div class="card-link">
             <%= tweet.user.nickname %>

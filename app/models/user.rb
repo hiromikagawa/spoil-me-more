@@ -8,4 +8,5 @@ class User < ApplicationRecord
     validates :nickname
   end
   has_many :tweets
+  has_many :comments
 end
