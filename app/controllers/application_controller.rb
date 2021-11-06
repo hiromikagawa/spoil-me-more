@@ -11,7 +11,11 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters
+    #新規登録時許可
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
+    #情報更新時許可
+    devise_parameter_sanitizer.permit(:account_update,keys:[:nickname])
   end
+  
 
 end

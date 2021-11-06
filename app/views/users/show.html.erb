@@ -1,3 +1,30 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<p>MyPage <%= @user.id %></p>
+<h1>MyPage</h1>
+
+<p>ニックネーム名：<%= @user.nickname %></p>
+<%#プロフィールの内容を表示%>
+<%= @user.email%>
+<%#プロフィールの内容編集ボタン%>
+<li><%=link_to "プロフィールを編集する",edit_user_registration_path(current_user.id)%></li>
+<%#投稿内容一覧%>
+  <% @user.tweets.each do |tweet|%>
+    <div class="user_post">
+      <section class="card">
+          <div>
+           <%= image_tag tweet.image.variant(resize: '350x300'), class: 'message-image' if tweet.image.attached? %>
+          <div>
+          <div class="card-content">
+            <h4 class="card-title">
+            <li><%= link_to tweet.title, tweet_path(tweet.id), method: :get %></li>
+            </h4>
+          </div>
+          <div class="card-link">
+            <%= tweet.user.nickname %>
+          </div>
+      </section>
+    </div>
+  <% end %>
+<%#フォローメンバーの投稿表示%>
+
+
+
+
