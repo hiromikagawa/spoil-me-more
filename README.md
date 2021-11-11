@@ -120,7 +120,7 @@ belongs_to :comment
 belongs_to :user
 belongs_to :tweet
 
-## relationshipテーブル
+## relationsテーブル
 ### フォロー機能
 | Column   | Type       | Options          |
 |----------|------------|------------------|

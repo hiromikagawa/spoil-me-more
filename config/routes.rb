@@ -7,10 +7,4 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end
   resources :users, only: :show
-  resources :users do
-    member do
-      get :following, :followers
-    end
-  end
-  resources :relationships,  only: [:create, :destroy]
 end
