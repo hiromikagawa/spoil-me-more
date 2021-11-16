@@ -8,14 +8,6 @@
 <%#フォローワーの表示%>
 <%= render 'follow_form' %>
 <%= render 'stats' %>
-
-<% @user.followings.each do |user|%>
-  <table>
-   <tr>
-  <td> <%= user.username %> </td>
-   <td><%= link_to '詳細', user_path(user) %></td>
-  </table>
-<% end %>
 <%#投稿内容一覧%>
   <% @user.tweets.each do |tweet|%>
     <div class="user_post">
