@@ -31,7 +31,7 @@
 &emsp; RSpec/factory_bot  
 開発環境  
 Github/Visual Studio Code  
-## 実装した機能のついて  10月31日時点
+## 実装した機能のついて  11月12日時点
 -1)ユーザー管理機能（devise)
 [![Image from Gyazo](https://i.gyazo.com/9680f414324ca723e9e40c192dac66a4.gif)](https://gyazo.com/9680f414324ca723e9e40c192dac66a4)
 -2)投稿機能
@@ -39,13 +39,13 @@ Github/Visual Studio Code
 -3)コメント機能(view修正中)
 [![Image from Gyazo](https://i.gyazo.com/9fc83aebed02d42c150fd06b3bd47c15.gif)](https://gyazo.com/9fc83aebed02d42c150fd06b3bd47c15)
 -4)画像投稿機能  
--5)テストの実施（userモデルのみ）  
+−5）フォロー機能  
+-6) 素敵ね機能  
+-7)テストの実施（userモデルのみ）  
 ## 課題や今後実装したい機能  
 -素敵ね機能  
--頑張ってるね機能  
 -マイページ機能  
 -ランキング機能  
--フォロー機能  
 -個人チャット機能  
 -スマホレスポンシブ機能  
 ## 開発日数  

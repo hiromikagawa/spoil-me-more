@@ -27,6 +27,19 @@
           <div class="card-content">
             <h4 class="card-title">
             <li><%= link_to tweet.title, tweet_path(tweet.id), method: :get %></li>
+            <%#いいね解除ボタン%>
+            <% if current_user.favorites.include?(tweet)%>
+              <%= form_with(model: @best, url: best_path(id: tweet.id), local: true, method: :delete) do |f| %>
+                 <%= f.hidden_field :tweet_id, value: tweet.id%>
+                 <%= f.submit '頑張ってる!解除' %>
+              <% end %>
+            <% else %>
+             <%#いいねボタン%>
+              <%= form_with(model: @best,url: bests_path, local: true) do |f| %>
+                 <%= f.hidden_field :tweet_id, value: tweet.id%>
+                 <%= f.submit '頑張ってるね' %>
+              <% end %>
+            <% end %>
             </h4>
           </div>
           <div class="card-link">
