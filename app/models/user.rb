@@ -9,11 +9,19 @@ class User < ApplicationRecord
   end
   has_many :tweets
   has_many :comments
+  #素敵ね機能の保管場所
+  has_many :likes
+  has_many :favorites, through: :likes, source: :comment
+  def like_this(clicked_comment)
+    self.likes.find_or_create_by(comment: clicked_comment)
+  end
+  #頑張っているね機能保管内容
   has_many :bests
   has_many :favorites, through: :bests, source: :tweet
   def best_this(clicked_tweet)
     self.bests.find_or_create_by(tweet: clicked_tweet)
   end
+
   #フォロー取得
   has_many :following_relationships, foreign_key: "follower_id", class_name: "Relationship", dependent: :destroy
   has_many :followings, through: :following_relationships
