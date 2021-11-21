@@ -37,6 +37,17 @@
         <p class="show-comments-list">
           <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
           <%= comment.text %>
+          <% if current_user.favorites.include?(comment) %>
+            <%= form_with( model:@like, url: like_path(id: comment.id), local: true, method: :delete) do |f| %>
+             <%= f.hidden_field :comment_id, value: comment.id %>
+             <%= f.submit '素敵です!解除'%>
+            <% end %>
+          <% else %>
+            <%= form_with(model: @like, url: likes_path, local: true) do |f| %>
+             <%= f.hidden_field :comment_id, value: comment.id %>
+             <%= f.submit '素敵です' %>
+            <% end %>
+          <% end %>
         </p>
       <% end %>
   </div>
