@@ -2,6 +2,7 @@ class TweetsController < ApplicationController
   before_action :set_tweet,only: [:edit, :show]
   def index
     @tweets = Tweet.includes(:user).order("created_at DESC")
+    @all_ranks = Tweet.find(Best.group(:tweet_id).order('count(tweet_id) desc').limit(3).pluck(:tweet_id))
   end
 
   def new
