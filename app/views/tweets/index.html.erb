@@ -7,9 +7,16 @@
       </h1>
       <p class='servicr-explain'>
        spoil me more は、いつも頑張っているあなたに
-       </p>
+      </p>
     </div>
   </div>
+  <h3>週間いいね数ランキング</h3>
+  <% @all_ranks.each_with_index do |tweet,i|%>
+  第<%= i+1 %>位
+  <%= link_to tweet.title, tweet_path(tweet.id), local: true, method: :get %>
+  投稿者
+  <%= link_to tweet.user.nickname, "/users/#{tweet.user.id}" %>
+  <% end %>
   <div class='main-lists'>
     <ul class='main-lists-contents'>
       <li><%= link_to '今日も素敵❤️(新規投稿）', new_tweet_path, class: "tweet-up" %></li>
@@ -18,8 +25,9 @@
   <div class='tweet-contents'>
     <h3 class='pickuup-title'>NEW</h3>
   </div>
+   <%# 投稿記事の表示%>
   <div class = 'card-list'>
-    <% @tweets.first(3).each do |tweet|%>
+    <% @tweets.each do |tweet|%>
       <section class="card">
           <div>
            <%= image_tag tweet.image.variant(resize: '350x300'), class: 'message-image' if tweet.image.attached? %>

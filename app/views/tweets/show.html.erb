@@ -1,9 +1,6 @@
 <link rel ='stylesheet' href="tweet.css">
 <div class="contents-row-show">
     <% if user_signed_in? && current_user.id == @tweet.user_id %>
-      <div class="more">
-        <%= image_tag @tweet.image.variant(resize: '500x500'), class: 'message-image' if @tweet.image.attached? %>
-        <ul class="more_list">
           <li>
             <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
           </li>
@@ -11,8 +8,11 @@
             <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
           </li>
         </ul>
-      </div>
     <% end %>
+    <div class="more">
+        <%= image_tag @tweet.image.variant(resize: '500x500'), class: 'message-image' if @tweet.image.attached? %>
+        <ul class="more_list">
+    </div>
     <p><%= @tweet.title %></p>
     <p><%= @tweet.text %></p>
     <span class="name">
